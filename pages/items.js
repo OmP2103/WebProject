@@ -1,3 +1,4 @@
+/* This page gets the items and prices from a database and displays them into a grid form. */
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import {styled,keyframes} from 'styled-components';

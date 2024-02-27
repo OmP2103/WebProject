@@ -1,3 +1,6 @@
+/* This is the admin page. From here the prices of any item, menu item, and gas price can be changed. The page
+reads data from the data base and changes the price anytime a price change is added.
+*/
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { database } from '@/library/firebaseConfig';
@@ -48,9 +51,7 @@ const AdminPage = () => {
         const Item1 = data.find(item => item.name == itemer);
         if (Item1) {
           Item1.price = itemprice;
-        } else {
-          console.log(`${menu} not found in the menu`);
-        }
+        } 
         data = {array: data}
         setDoc(itRef,data)
         .then(()=>{

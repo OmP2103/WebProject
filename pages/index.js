@@ -1,3 +1,4 @@
+/* This is the index page. This page has a picture of the store as well as the gas prices. The gas prices are stored within a database and pulled from there*/
 import Head from "next/head";
 import styled,{keyframes} from "styled-components";
 import Navbar from "@/components/Navbar";
@@ -43,7 +44,7 @@ async function getMenu() {
           <LeftSide>
             <Image 
             src="/storepic.jpeg"
-            width={850}
+            width={800}
             height={781}
             />
           </LeftSide>
@@ -56,9 +57,11 @@ async function getMenu() {
             </GasPricesContainer>         
           </Rightside>
         </Container>
+        <ButtonContainer>
         <Log onClick={goAdmin}>
           admin
         </Log>
+        </ButtonContainer>
       </main>
     </>
   );
@@ -73,7 +76,7 @@ const fadeIn = keyframes`
 `;
 
 const Container = styled.div`
-width: 100%;
+width: 100%
 height: 100%;
 display: flex;
 flex-direction: row;
@@ -82,14 +85,14 @@ background-color: #FF7F00;
 
 const LeftSide = styled.div`
 height: 100%;
-width: 50%;
+width: 100%;
 background-color: #FF7F00;
 animation: ${fadeIn} 1s ease;
 `
 
 const Rightside = styled.div`
 height: 100%;
-width: 50%;
+width: 100%;
 background-color: #FF7F00;
 `
 const GasPricesContainer = styled.div`
@@ -100,18 +103,22 @@ const GasPricesContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 40vw;
   animation: ${fadeIn} 1s ease;
 `;
 
 const Title = styled.h2`
-  font-size: 125px;
+  font-size: 100px;
   margin-bottom: 10px;
 `;
 
 const Price = styled.p`
-  font-size: 125px;
+  font-size: 100px;
   margin-bottom: 10px;
 `;
+const ButtonContainer = styled.div`
+background-color: #FF7F00;
+`
 
 const Log = styled.button`
 padding: .05vw;

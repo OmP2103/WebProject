@@ -1,3 +1,5 @@
+/* This is the menu page. This page displays all the menu items as well as their prices. The menu Items/pictures are all pulled from a database and displayed
+in grid form */
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import { styled, keyframes } from 'styled-components';

@@ -1,3 +1,4 @@
+/* This is the contact page. It holds the hours and information of the store as well as the phone number */
 import React from 'react'
 import Navbar from '@/components/Navbar'
 import styled from "styled-components";
